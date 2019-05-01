@@ -1,0 +1,28 @@
+{
+  "name": "reactbasics",
+  "version": "1.0.0",
+  "description": "some basic react",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build",
+    "copy-files": "@powershell copy src/index.html dist/",
+    "build": "webpack -d && npm run copy-files && webpack-dev-server --content-base src/ --hot",
+    "build:prod": "webpack -p && npm run copy-files "
+},
+  "author": "shola ogundipe",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-preset-stage-3": "^6.24.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
